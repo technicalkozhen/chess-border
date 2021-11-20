@@ -1,0 +1,75 @@
+<head>
+    <style>
+        table{
+            margin: auto;
+        }
+        td{
+            border: 1px solid;
+            height: 90px;
+            width: 90px;
+            text-align: center;
+        }
+    </style>
+</head>
+<table>
+    <?php 
+    
+    for($x=8;$x>0;$x--){
+    echo "<tr>";
+        for($y=8;$y>0;$y--){
+            
+            if($y %2 ==0){
+                $color='#fff';
+                
+            }else{
+                 $color='gray';
+            }   
+            
+            if($x %2 ==0){
+                if($y %2 ==0){
+                    $color='gray';
+                }else{
+                    $color='#fff';
+                }     
+            }
+
+              $num1=0;
+              $num2="";
+              if($x>0 && $y==8){
+                $num1=$x;
+                $num2="A";
+            }else if($x>0 && $y==7){
+                $num1=$x;
+                $num2="B";
+            }else if($x>0 && $y==6){
+                $num1=$x;
+                $num2="C";
+            }else if($x>0 && $y==5){
+                $num1=$x;
+                $num2="D";
+            }else if($x>0 && $y==4){
+                $num1=$x;
+                $num2="E";
+            }else if($x>0 && $y==3){
+                $num1=$x;
+                $num2="F";
+            }else if($x>0 && $y==2){
+                $num1=$x;
+                $num2="G";
+            }else if($x>0 && $y==1){
+                $num1=$x;
+                $num2="H";
+            }
+            
+            echo "<td style='background: ".$color.";'>$num2$num1</td>";
+        }
+
+       
+
+
+    echo "</tr>";
+
+    }
+    
+    ?>
+</table>
